@@ -14,16 +14,16 @@ const geistMono = localFont({
   weight: "100 900",
 });
 
+const AnekTelugu = Anek_Telugu({
+  subsets: ["latin"],
+  variable: "--font-caption",
+});
+
 export const metadata: Metadata = {
   title: "Vincent Cantonnet - Full Stack Developper",
   description:
     "Trained in PHP, React, SQL and GraphQL, on the lookout for new professional opportunities.",
 };
-
-const AnekTelugu = Anek_Telugu({
-  subsets: ["latin"],
-  variable: "--font-caption",
-});
 
 export default function RootLayout({
   children,
