@@ -1,5 +1,4 @@
-export type PersonalProjectProps = {
-  //   Logo: LucideIcon;
+export type ProjectProps = {
   Logo: string;
   title: string;
   description: string;

@@ -1,8 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
-import { PersonalProjectProps } from "../types";
+import { ProjectProps } from "../types";
 
-export const PersonalProject = (props: PersonalProjectProps) => {
+export const Project = (props: ProjectProps) => {
   return (
     <Link
       target="_blank"

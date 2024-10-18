@@ -1,4 +1,4 @@
-import { ContactProps, PersonalProjectProps, SkillProps, WorkProps } from "../types";
+import { ContactProps, ProjectProps, SkillProps, WorkProps } from "../types";
 import php from "../../public/images/php_logo.png";
 import javascript from "../../public/images/javascript_logo.png";
 import graphql from "../../public/images/graphql_logo.png";
@@ -12,7 +12,7 @@ import project_management from "../../public/images/project_management.png";
 import communication from "../../public/images/communication.png";
 
 
-export const SIDE_PROJECTS: PersonalProjectProps[] = [
+export const SIDE_PROJECTS: ProjectProps[] = [
   {
     Logo: wcag.src,
     title: "Access4All",
@@ -23,10 +23,10 @@ export const SIDE_PROJECTS: PersonalProjectProps[] = [
   },
   {
     Logo: graphql.src,
-    title: "Whatsnext",
+    title: "Eco City Guide",
     description:
-      "A website about hip hop Lps, aiming to improve mys skills acquired during my training, developped with Node, Next, React, Typescript and GraphQL - work in progress",
-    url: "https://github.com/VinchC/whatsnext",
+      "A website representing a map allowing to find eco-related places, developped with my fellow students during my training, with Node, Next, React, Typescript and GraphQL",
+    url: "https://github.com/Eco-Map/eco-city-guide",
     alt: "GraphQL logo",
   },
   {
