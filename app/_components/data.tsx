@@ -40,7 +40,7 @@ export const SIDE_PROJECTS: ProjectProps[] = [
     Logo: javascript.src,
     title: "Secret Santa",
     description:
-      "A little joke developped in HTML, CSS and JavaScript - hidden bonus inside !",
+      "A little joke developped in HTML, CSS and JavaScript - hidden bonus inside!",
     url: "https://github.com/VinchC/secret_santa",
     alt: "JavaScript logo",
   },
@@ -91,7 +91,7 @@ export const SKILLS: SkillProps[] = [
     picture: empathy.src,
     alt: "A human head which contains a hand which carry hearts, symbolizing empathy.",
     title: "Empathy",
-    description: "I had the opportunity to improve on that skill during my training as a student, and as Teacher Assistant as well. Who could achieve collective goals without it ?",
+    description: "I had the opportunity to improve on that skill during my training as a student, and as Teacher Assistant as well. Who could achieve collective goals without it?",
   },
   {
     picture: project_management.src,

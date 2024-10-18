@@ -9,17 +9,17 @@ export const SkillCard = (props: {
   description: string;
 }) => {
   return (
-    <Card className="p-3 border-0 h-24 hover:bg-accent/50 transition-colors flex items-center gap-4">
-      <div >
-        <img
-          src={props.picture}
-          alt={props.alt}
-          className="max-w-16 h-auto object-contain rounded-sm animate-pulse bg-white"
-        />
-      </div>
-      <div className="mr-auto">
-        <p className="text-lg font-semibold">{props.title}</p>
-        <p className="text-sm text-muted-foreground">{props.description}</p>
+    <Card className="flex-[4] p-3 border-0 h-auto hover:bg-accent/50 transition-colors">
+      <div className="flex flex-col items-center justify-center max-h-160 gap-3">
+        <div className="flex items-center h-16">
+          <img
+            src={props.picture}
+            alt={props.alt}
+            className="flex items-center max-w-16 max-h-16 rounded-sm animate-pulse bg-white"
+          />
+        </div>
+          <p className="text-lg font-semibold">{props.title}</p>
+          <p className="text-sm text-muted-foreground">{props.description}</p>
       </div>
     </Card>
   );

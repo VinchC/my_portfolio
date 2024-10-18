@@ -6,11 +6,11 @@ import { SkillCard } from "./SkillCard";
 
 export const Skill = () => {
   return (
-    <Section className="flex max-md:flex-col items-start gap-4 mt-4">
-      <div className="flex-[3] w-full">
-        <Card className="w-full p-4 flex flex-col gap-2">
+    <Section className="flex min-md:flex-col items-start gap-4 mt-4">
+      <div className="w-full">
+        <Card className="p-4 gap-2">
           <p className="text-lg text-muted-foreground">Soft skills</p>
-          <div className="flex flex-col gap-3">
+          <div className="flex max-md:flex-col min-md:flex-row">
             {SKILLS.map((skill, index) => (
               <SkillCard key={index} {...skill} />
             ))}

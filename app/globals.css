@@ -15,7 +15,7 @@ body {
 @layer base {
   :root {
     --background: 1 00% 00%;
-    --foreground: 219 18% 71%;
+    --foreground: 0, 10%, 80%;
     --muted: 216 12% 19%;
     --muted-foreground: 216 12% 69%;
     --popover: 216 13% 312%;
@@ -23,7 +23,6 @@ body {
     --card: 1 5% 5%;
     --card-foreground: 219 18% 76%;
     --border: 303, 98%, 32%, 0.847;
-    /* --border: 1 27% 70%; */
     --input: 216 3% 23%;
     --primary: 219 18% 81%;
     --primary-foreground: 219 18% 21%;
