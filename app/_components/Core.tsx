@@ -2,26 +2,19 @@
 import { Card } from "@/components/ui/card";
 import { Section } from "./Section";
 import { Work } from "./Work";
-import { SIDE_PROJECTS, WORKS } from "./data";
+import { SIDE_PROJECTS, WORKS, CONTACT } from "./data";
 import { PersonalProject } from "./PersonalProject";
+import { ContactCard } from "./ContactCard";
 
 export const Core = () => {
   return (
-    <Section className="flex max-md:flex-col items-start gap-4">
+    <Section className="flex max-md:flex-col items-start gap-4 mt-4">
       <div className="flex-[3] w-full">
         <Card className="w-full p-4 flex flex-col gap-2">
           <p className="text-lg text-muted-foreground">Personal projects</p>
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col gap-3">
             {SIDE_PROJECTS.map((project, index) => (
-              <PersonalProject
-                key={index}
-                {...project}
-                // Logo={project.Logo}
-                // title={project.title}
-                // description={project.description}
-                // url={project.url}
-                // alt={project.alt}
-              />
+              <PersonalProject key={index} {...project} />
             ))}
           </div>
         </Card>
@@ -31,21 +24,21 @@ export const Core = () => {
           <p className="text-lg text-muted-foreground">Work</p>
           <div className="flex flex-col gap-4">
             {WORKS.map((work, index) => (
-              <Work
-                key={index}
-                // url={work.url}
-                // picture={work.picture}
-                // alt={work.alt}
-                // title={work.title}
-                // role={work.role}
-                // date={work.date}
-                // training={work?.training}
-                {...work}
-              />
+              <Work key={index} {...work} />
             ))}
           </div>
         </Card>
-        <Card className="p-4 flex-1">Contact me</Card>
+        <Card>
+          <div>
+            {CONTACT && (
+              <ContactCard
+                image={CONTACT.image}
+                title={CONTACT.title}
+                description={CONTACT.description}
+              />
+            )}
+          </div>
+        </Card>
       </div>
     </Section>
   );

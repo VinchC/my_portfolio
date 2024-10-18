@@ -16,3 +16,9 @@ export type WorkProps = {
   date: string;
   training?: boolean;
 };
+
+export type ContactProps = {
+  image: string;
+  title: string;
+  description: string;
+};

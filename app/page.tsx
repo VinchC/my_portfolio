@@ -11,6 +11,7 @@ export default function Home() {
       <About />
       <Spacing size="md" />
       <Core />
+      <Spacing size="md" />
     </main>
   );
 }

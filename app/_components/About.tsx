@@ -22,12 +22,12 @@ export const About = () => {
   return (
     <>
       <Section className="flex max-md:flex-col items-start gap-4">
-        <div className="flex-[3] flex flex-col gap-2">
-          <h2 className="font-caption font-bold text-5xl text-primary">
+        <div className="flex-[3] flex flex-col gap-2 w-full">
+          {/* <h2 className="font-caption font-bold text-3xl text-primary">
             Vincent Cantonnet
-          </h2>
-          <h3 className="text-3xl font-caption">Full Stack Developper</h3>
-          {/* <p>
+          </h2> */}
+          <h3 className="text-5xl font-caption">Full Stack Developper</h3>
+          <p>
             Having held the position of Teaching Assistant as part of my
             work-study training as an Application Developer Designer, an
             unforgettable experience that was rich in many ways, I want to use
@@ -38,7 +38,7 @@ export const About = () => {
             I also have a particular appetite for the topics of accessibility
             and security, being keen to place people at the center of a
             responsible digital approach.
-          </p> */}
+          </p>
           <p className="text-base">
             I am currently focusing on learning the good practices regarding the
             former, content is available on{" "}
@@ -69,7 +69,7 @@ export const About = () => {
             .
           </p>
         </div>
-        <div className="flex-[2] max-md:m-auto ml-auto">
+        <div className="flex-[2] flex justify-around max-md:m-auto ml-auto">
           <img
             src={portrait.src}
             className="w-full h-auto max-w-xs max-md:w-56  rounded-full"

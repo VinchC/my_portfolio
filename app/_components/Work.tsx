@@ -12,7 +12,7 @@ export const Work = (props: WorkProps) => {
     >
       <img
         src={props.picture}
-        className="w-12 h-auto bg-white object-contain rounded-sm"
+        className="w-12 h-auto bg-white object-contain"
         // style={{ width: 48, height: "auto", background: "white" }}
         alt={props.alt}
       />
