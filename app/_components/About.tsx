@@ -1,31 +1,15 @@
 /* eslint-disable @next/next/no-img-element */
 import { Section } from "./Section";
 import portrait from "../../public/images/portrait.jpeg";
-import { ComponentPropsWithoutRef } from "react";
-import { cn } from "@/lib/utils";
 import { GithubIcon } from "./icons/GithubIcon";
 import Link from "next/link";
-
-const Code = ({ className, ...props }: ComponentPropsWithoutRef<"span">) => {
-  return (
-    <span
-      className={cn(
-        "bg-accent/30 font-mono border hover:bg-accent/50 transition-colors border-accent px-1 py-0.5 text-primary rounded-lg",
-        className
-      )}
-      {...props}
-    />
-  );
-};
+import { Code } from "./Code";
 
 export const About = () => {
   return (
     <>
-      <Section className="flex max-md:flex-col items-start gap-4">
+      <Section className="flex max-md:flex-col items-center gap-4">
         <div className="flex-[3] flex flex-col gap-2 w-full">
-          {/* <h2 className="font-caption font-bold text-3xl text-primary">
-            Vincent Cantonnet
-          </h2> */}
           <h3 className="text-5xl font-caption">Full Stack Developper</h3>
           <p>
             Having held the position of Teaching Assistant as part of my
@@ -72,7 +56,7 @@ export const About = () => {
         <div className="flex-[2] flex justify-around max-md:m-auto ml-auto">
           <img
             src={portrait.src}
-            className="w-full h-auto max-w-xs max-md:w-56  rounded-full"
+            className="flex w-56 h-auto max-w-xs max-md:w-40 rounded-full"
             alt="Vincent Cantonnet's portrait"
           />
         </div>

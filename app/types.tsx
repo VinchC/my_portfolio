@@ -22,3 +22,10 @@ export type ContactProps = {
   title: string;
   description: string;
 };
+
+export type SkillProps = {
+  picture: string;
+  alt: string;
+  title: string;
+  description: string;
+};
