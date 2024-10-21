@@ -1,9 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
-import { WorkProps } from "../types";
-import { Badge } from "@/components/ui/badge";
+import { EducationProps } from "../types";
 
-export const Work = (props: WorkProps) => {
+export const Education = (props: EducationProps) => {
   return (
     <Link
       target="_blank"
@@ -18,13 +17,12 @@ export const Work = (props: WorkProps) => {
       />
       <div>
         <div>
-          <p className="text-sm font-semibold">{props.role}</p>
+          <p className="text-sm font-semibold">{props.title}</p>
         </div>
-        <p className="text-xs text-muted-foreground">{props.title}</p>
+        <p className="text-xs text-muted-foreground">{props.school}</p>
       </div>
       <div className="ml-auto">
         <p className="text-xs text-end text-muted-foreground">{props.date}</p>
-          {props.training && <Badge className="text-xs border border-lime-500 text-lime-500" variant="outline">Training</Badge>}
       </div>
     </Link>
   );
