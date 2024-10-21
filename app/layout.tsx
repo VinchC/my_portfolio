@@ -14,16 +14,16 @@ const geistMono = localFont({
   weight: "100 900",
 });
 
+const AnekTelugu = Anek_Telugu({
+  subsets: ["latin"],
+  variable: "--font-caption",
+});
+
 export const metadata: Metadata = {
   title: "Vincent Cantonnet - Full Stack Developper",
   description:
     "Trained in PHP, React, SQL and GraphQL, on the lookout for new professional opportunities.",
 };
-
-const AnekTelugu = Anek_Telugu({
-  subsets: ["latin"],
-  variable: "--font-caption",
-});
 
 export default function RootLayout({
   children,
@@ -33,7 +33,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="h-full">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${AnekTelugu.variable} h-full antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${AnekTelugu.variable} h-full bg-background text-foreground`}
       >
         {children}
       </body>
