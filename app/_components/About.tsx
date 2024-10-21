@@ -11,19 +11,19 @@ export const About = () => {
       <Section className="flex max-md:flex-col items-center gap-4">
         <div className="flex-[3] flex flex-col gap-2 w-full">
           <h3 className="text-5xl font-caption">Full Stack Developper</h3>
-          <p>
+          <p className="text-muted-foreground">
             Having held the position of Teaching Assistant as part of my
             work-study training as an Application Developer Designer, an
             unforgettable experience that was rich in many ways, I want to use
             my skills as a Full Stack Developer in the context of ambitious and
             varied projects.
           </p>
-          <p>
+          <p className="text-muted-foreground">
             I also have a particular appetite for the topics of accessibility
             and security, being keen to place people at the center of a
             responsible digital approach.
           </p>
-          <p className="text-base">
+          <p className="text-muted-foreground">
             I am currently focusing on learning the good practices regarding the
             former, content is available on{" "}
             <Link target="_blank" href="https://github.com/VinchC">
@@ -34,13 +34,13 @@ export const About = () => {
             </Link>
             .
           </p>
-          <p>
+          <p className="text-muted-foreground">
             Being particularly sensitive to productivity and optimization
             issues, especially when they revolve around in-depth reflection
             regarding the user journey, I would be pleased to discuss a future
             collaboration.
           </p>
-          <p className="text-base">
+          <p className="text-muted-foreground">
             Living in
             <Code className="inline-flex items-center gap-1">
               <img
