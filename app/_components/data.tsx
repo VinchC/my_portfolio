@@ -17,7 +17,7 @@ export const SIDE_PROJECTS: ProjectProps[] = [
     Logo: wcag.src,
     title: "Access4All",
     description:
-      "A website which aims to be accessible by anybody, developped with Next, React, Typescript - work in progress",
+      "A website which aim is to work on the good practices regarding accessibility, developped with Next, React, Typescript - work in progress.",
     url: "https://github.com/VinchC/access",
     alt: "WCAG logo",
   },
@@ -25,14 +25,14 @@ export const SIDE_PROJECTS: ProjectProps[] = [
     Logo: graphql.src,
     title: "Eco City Guide",
     description:
-      "A website representing a map allowing to find eco-related places, developped with my fellow students during my training, with Node, Next, React, Typescript and GraphQL",
+      "Developped with my fellow students during my training, this is a map allowing to find eco-related places, developped with Typescript and GraphQL.",
     url: "https://github.com/Eco-Map/eco-city-guide",
     alt: "GraphQL logo",
   },
   {
     Logo: php.src,
     title: "Wild Series",
-    description: "A website about series, developped with Symfony",
+    description: "A website about series, developped with Symfony.",
     url: "https://github.com/VinchC/wild_series",
     alt: "PHP logo",
   },
