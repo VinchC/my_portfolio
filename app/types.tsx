@@ -28,3 +28,12 @@ export type SkillProps = {
   title: string;
   description: string;
 };
+
+export type EducationProps = {
+  url: string;
+  picture: string;
+  alt: string;
+  title: string;
+  date: string;
+  school: string;
+};

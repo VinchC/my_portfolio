@@ -15,9 +15,9 @@ export const Project = (props: ProjectProps) => {
         alt={props.alt}
       />
       <div>
-        <p className="text-lg font-semibold">{props.title}</p>
+        <p className="text-md font-semibold">{props.title}</p>
 
-        <p className="text-sm text-muted-foreground">{props.description}</p>
+        <p className="text-xs text-muted-foreground">{props.description}</p>
       </div>
     </Link>
   );
