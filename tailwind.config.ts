@@ -10,6 +10,8 @@ const config: Config = {
   theme: {
 	fontFamily: {
 		caption: ["var(--font-caption)"],
+		sans: ["var(--font-geist-sans)"],
+		mono: ["var(--font-geist-mono)"],
 	},
   	extend: {
   		colors: {
