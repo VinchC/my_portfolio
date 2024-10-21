@@ -1,4 +1,4 @@
-import { ContactProps, ProjectProps, SkillProps, WorkProps } from "../types";
+import { ContactProps, EducationProps, ProjectProps, SkillProps, WorkProps } from "../types";
 import php from "../../public/images/php_logo.png";
 import javascript from "../../public/images/javascript_logo.png";
 import graphql from "../../public/images/graphql_logo.png";
@@ -109,3 +109,14 @@ export const SKILLS: SkillProps[] = [
       "A key to achieve one's goals or to avoid (a lot of) mistakes, while keeping people at the center of the project.",
   },
 ];
+
+export const EDUCATION: EducationProps[] = [
+  {
+    url: "https://www.wildcodeschool.com/fr-fr/",
+    picture: wcs.src,
+    alt: "Wild Code School logo",
+    title: "TP Concepteur développeur d'applications",
+    date: "Delivered on 04/10/2024",
+    school: "Wild Code School",
+  }
+]
