@@ -8,6 +8,7 @@ import Link from "next/link";
 import { LinkedInIcon } from "./icons/LinkedInIcon";
 import { Mail } from "lucide-react";
 import { Code } from "./Code";
+import CV from "./CV";
 
 export const Header = ({
   language,
@@ -16,7 +17,6 @@ export const Header = ({
   language: string;
   toggleLanguage: any;
 }) => {
-  
   return (
     <header className="sticky top-0 py-4 bg-card">
       <Section className="flex items-baseline">
@@ -24,7 +24,9 @@ export const Header = ({
           Vincent Cantonnet
         </h1>
         <div className="flex-1" />
+
         <ul className="flex items-center gap-2">
+          <CV />
           <Link
             target="_blank"
             href="mailto:vinch.cm@gmail.com"
