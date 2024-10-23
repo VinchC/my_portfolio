@@ -4,19 +4,23 @@ import { Spacing } from "./_components/Spacing";
 import { Core } from "./_components/Core";
 import { Skill } from "./_components/Skill";
 import { Footer } from "./_components/Footer";
+import SkipLink from "./_components/SkipLink";
 
 export default function Home() {
   return (
-    <main>
+    <>
+      <SkipLink />
       <Header />
-      <Spacing size="sm" />
-      <About />
-      <Spacing size="sm" />
-      <Core />
-      <Spacing size="sm" />
-      <Skill />
-      <Spacing size="sm" />
-      <Footer />
-    </main>
+      <main id="maincontent">
+        <Spacing size="sm" />
+        <About />
+        <Spacing size="sm" />
+        <Core />
+        <Spacing size="sm" />
+        <Skill />
+        <Spacing size="sm" />
+        <Footer />
+      </main>
+    </>
   );
 }
