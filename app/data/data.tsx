@@ -1,4 +1,10 @@
-import { ContactProps, EducationProps, ProjectProps, SkillProps, WorkProps } from "../types";
+import {
+  ContactProps,
+  EducationProps,
+  ProjectProps,
+  SkillProps,
+  WorkProps,
+} from "../types";
 import php from "../../public/images/php_logo.png";
 import javascript from "../../public/images/javascript_logo.png";
 import graphql from "../../public/images/graphql_logo.png";
@@ -24,7 +30,7 @@ export const SIDE_PROJECTS: ProjectProps[] = [
     Logo: graphql.src,
     title: "Eco City Guide",
     description:
-      "Developped with my fellow students during my training, this is a map allowing to find eco-related places, developped with GraphQL and Tailwind",
+      "Developped with my fellow students during my training, this is a map allowing to find eco-related places, developped with GraphQL and Tailwind.",
     url: "https://github.com/Eco-Map/eco-city-guide",
     alt: "GraphQL logo",
   },
@@ -214,19 +220,19 @@ export const EDUCATION: EducationProps[] = [
     url: "https://www.wildcodeschool.com/fr-fr/",
     picture: wcs.src,
     alt: "Wild Code School logo",
-    title: "TP Concepteur développeur d'applications",
+    title: "Concepteur développeur d'applications",
     date: "Received 04/10/2024",
     school: "Wild Code School",
-  }
-]
+  },
+];
 
 export const EDUCATIONFR: EducationProps[] = [
   {
     url: "https://www.wildcodeschool.com/fr-fr/",
     picture: wcs.src,
     alt: "Wild Code School logo",
-    title: "TP Concepteur développeur d'applications",
+    title: "Concepteur développeur d'applications",
     date: "Délivré le 04/10/2024",
     school: "Wild Code School",
-  }
-]
+  },
+];
