@@ -2,8 +2,13 @@
 import Link from "next/link";
 import { WorkProps } from "../types";
 import { Badge } from "@/components/ui/badge";
+import LanguageContext from "../contexts/LanguageContext";
+import { useContext } from "react";
 
 export const Work = (props: WorkProps) => {
+
+  const language = useContext(LanguageContext);
+
   return (
     <Link
       target="_blank"

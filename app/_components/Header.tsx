@@ -16,6 +16,7 @@ export const Header = ({
   language: string;
   toggleLanguage: any;
 }) => {
+  
   return (
     <header className="sticky top-0 py-4 bg-card">
       <Section className="flex items-baseline">

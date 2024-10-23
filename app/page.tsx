@@ -9,6 +9,7 @@ import { Skill } from "./_components/Skill";
 import { Footer } from "./_components/Footer";
 import SkipLink from "./_components/SkipLink";
 import { useState } from "react";
+import LanguageContext from "./contexts/LanguageContext";
 
 export default function Home() {
   const [language, setLanguage] = useState("English");
@@ -20,17 +21,21 @@ export default function Home() {
   return (
     <>
       <SkipLink />
+
       <Header language={language} toggleLanguage={toggleLanguage} />
-      <main id="maincontent">
-        <Spacing size="sm" />
-        {language === "English" ? <About /> : <Aboutfr />}
-        <Spacing size="sm" />
-        <Core />
-        <Spacing size="sm" />
-        <Skill />
-        <Spacing size="sm" />
-        <Footer />
-      </main>
+
+      <LanguageContext.Provider value={language}>
+        <main id="maincontent">
+          <Spacing size="sm" />
+          <About />
+          <Spacing size="sm" />
+          <Core />
+          <Spacing size="sm" />
+          <Skill />
+          <Spacing size="sm" />
+          <Footer />
+        </main>
+      </LanguageContext.Provider>
     </>
   );
 }
