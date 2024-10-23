@@ -9,7 +9,7 @@ export const SkillCard = (props: {
   description: string;
 }) => {
   return (
-    <Card className="flex-[4] p-3 border-0 h-auto hover:bg-accent/50 transition-colors">
+    <Card className="flex-[4] p-3 border-0 shadow-none h-auto hover:bg-accent/40 transition-colors">
       <div className="flex flex-col items-center justify-center max-h-160 gap-3">
         <div className="flex items-center h-16">
           <img
@@ -19,7 +19,7 @@ export const SkillCard = (props: {
           />
         </div>
           <p className="text-lg font-semibold">{props.title}</p>
-          <p className="text-sm text-muted-foreground">{props.description}</p>
+          <p className="text-sm">{props.description}</p>
       </div>
     </Card>
   );

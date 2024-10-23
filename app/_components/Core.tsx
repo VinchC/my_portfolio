@@ -2,12 +2,22 @@
 import { Card } from "@/components/ui/card";
 import { Section } from "./Section";
 import { Work } from "./Work";
-import { SIDE_PROJECTS, WORKS, EDUCATION, CONTACT } from "./data";
+import {
+  SIDE_PROJECTS,
+  SIDE_PROJECTSFR,
+  WORKS,
+  EDUCATION,
+  EDUCATIONFR,
+  WORKSFR,
+} from "../data/data";
 import { Project } from "./Project";
 import { Education } from "./Education";
-import { ContactCard } from "./ContactCard";
+import LanguageContext from "../contexts/LanguageContext";
+import { useContext } from "react";
 
 export const Core = () => {
+  const language = useContext(LanguageContext);
+
   return (
     <>
       <Section className="flex max-md:flex-col items-start gap-4 mt-4">
@@ -15,9 +25,20 @@ export const Core = () => {
           <Card className="w-full p-4 flex flex-col gap-2">
             <p className="text-lg text-muted-foreground">Projects</p>
             <div className="flex flex-col gap-3">
-              {SIDE_PROJECTS.map((project, index) => (
-                <Project key={index} {...project} />
-              ))}
+              {language === "English" ? (
+                <>
+                  {SIDE_PROJECTS.map((project, index) => (
+                    <Project key={index} {...project} />
+                  ))}
+                </>
+              ) : (
+                <>
+                  {" "}
+                  {SIDE_PROJECTSFR.map((project, index) => (
+                    <Project key={index} {...project} />
+                  ))}
+                </>
+              )}
             </div>
           </Card>
         </div>
@@ -25,36 +46,41 @@ export const Core = () => {
           <Card className="w-full p-4 flex flex-col gap-4">
             <p className="text-lg text-muted-foreground">Work</p>
             <div className="flex flex-col">
-              {WORKS.map((work, index) => (
-                <Work key={index} {...work} />
-              ))}
+              {language === "English" ? (
+                <>
+                  {WORKS.map((work, index) => (
+                    <Work key={index} {...work} />
+                  ))}
+                </>
+              ) : (
+                <>
+                  {WORKSFR.map((work, index) => (
+                    <Work key={index} {...work} />
+                  ))}
+                </>
+              )}
             </div>
           </Card>
           <Card className="w-full p-4 flex flex-col gap-2">
             <p className="text-lg text-muted-foreground p-1">Education</p>
             <div className="flex flex-col">
-              {EDUCATION.map((education, index) => (
-                <Education key={index} {...education} />
-              ))}
+              {language === "English" ? (
+                <>
+                  {EDUCATION.map((education, index) => (
+                    <Education key={index} {...education} />
+                  ))}
+                </>
+              ) : (
+                <>
+                  {EDUCATIONFR.map((education, index) => (
+                    <Education key={index} {...education} />
+                  ))}
+                </>
+              )}
             </div>
           </Card>
         </div>
       </Section>
-      {/* <Section className="gap-4 mt-4">
-      <div className="w-full">
-        <Card>
-          <div>
-            {CONTACT && (
-              <ContactCard
-                image={CONTACT.image}
-                title={CONTACT.title}
-                description={CONTACT.description}
-              />
-            )}
-          </div>
-        </Card>
-        </div>
-      </Section> */}
     </>
   );
 };

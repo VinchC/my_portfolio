@@ -3,9 +3,9 @@ import { Section } from "./Section";
 
 export const Footer = () => {
   return (
-    <footer className="bg-card hover:bg-accent/50">
+    <footer className="bg-card hover:bg-accent/40">
       <Section className="py-8">
-        <p className=" text-muted-foreground text-sm text-center">
+        <p className="text-sm text-card-foreground text-center">
           Copyrights 2024 Vincent Cantonnet - <Link href="mailto:vinch.cm@gmail.com">vinch.cm@gmail.com</Link>
         </p>
       </Section>
