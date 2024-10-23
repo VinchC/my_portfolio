@@ -7,7 +7,7 @@ export const Project = (props: ProjectProps) => {
     <Link
       target="_blank"
       href={props.url}
-      className="inline-flex items-center gap-4 hover:bg-accent/50 transition-colors h-28 p-1 rounded-lg"
+      className="inline-flex items-center gap-4 hover:bg-accent/40 transition-colors h-28 p-1 rounded-lg"
     >
       <img
         src={props.Logo}

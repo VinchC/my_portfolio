@@ -8,7 +8,7 @@ export const Work = (props: WorkProps) => {
     <Link
       target="_blank"
       href={props.url}
-      className="inline-flex items-center gap-4 hover:bg-accent/50 transition-colors h-24 p-1 rounded-lg"
+      className="inline-flex items-center gap-4 hover:bg-accent/40 transition-colors h-24 p-1 rounded-lg"
     >
       <img
         src={props.picture}
@@ -23,7 +23,7 @@ export const Work = (props: WorkProps) => {
       </div>
       <div className="ml-auto">
         <p className="text-xs text-end">{props.date}</p>
-          {props.training && <Badge className="text-xs border border-lime-400 text-lime-400" variant="outline">Training</Badge>}
+          {props.training && <Badge className="text-xs border border-lime-600 text-lime-600" variant="outline">Training</Badge>}
       </div>
     </Link>
   );

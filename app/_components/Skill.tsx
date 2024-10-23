@@ -10,7 +10,7 @@ export const Skill = () => {
       <div className="w-full">
         <Card className="p-4 gap-2">
           <p className="text-lg">Soft skills</p>
-          <div className="flex max-md:flex-col min-md:flex-row">
+          <div className="flex max-md:flex-col min-md:flex-row gap-2">
             {SKILLS.map((skill, index) => (
               <SkillCard key={index} {...skill} />
             ))}
