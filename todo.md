@@ -1,5 +1,1 @@
-## Skip navigation
-
-## Dark / light mode
-
-## Toggle English / French
+## Dark / light mode manual
