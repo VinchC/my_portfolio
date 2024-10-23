@@ -2,10 +2,9 @@
 import { Card } from "@/components/ui/card";
 import { Section } from "./Section";
 import { Work } from "./Work";
-import { SIDE_PROJECTS, WORKS, EDUCATION, CONTACT } from "./data";
+import { SIDE_PROJECTS, WORKS, EDUCATION } from "./data";
 import { Project } from "./Project";
 import { Education } from "./Education";
-import { ContactCard } from "./ContactCard";
 
 export const Core = () => {
   return (
@@ -40,21 +39,6 @@ export const Core = () => {
           </Card>
         </div>
       </Section>
-      {/* <Section className="gap-4 mt-4">
-      <div className="w-full">
-        <Card>
-          <div>
-            {CONTACT && (
-              <ContactCard
-                image={CONTACT.image}
-                title={CONTACT.title}
-                description={CONTACT.description}
-              />
-            )}
-          </div>
-        </Card>
-        </div>
-      </Section> */}
     </>
   );
 };
