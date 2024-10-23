@@ -2,7 +2,6 @@
 
 import { Header } from "./_components/Header";
 import { About } from "./_components/About";
-import { Aboutfr } from "./_components/Aboutfr";
 import { Spacing } from "./_components/Spacing";
 import { Core } from "./_components/Core";
 import { Skill } from "./_components/Skill";
