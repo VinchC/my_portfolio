@@ -13,36 +13,55 @@ body {
 }
 
 @layer base {
-  :root {
-    --background: 1 00% 00%;
-    --foreground: 0, 10%, 100%;
-    --muted: 216 12% 19%;
-    --muted-foreground: 216 12% 69%;
-    --popover: 216 13% 312%;
-    --popover-foreground: 219 18% 81%;
-    --card: 1 5% 5%;
-    --card-foreground: 219 18% 76%;
-    --border: 303, 98%, 32%, 0.847;
-    --input: 216 3% 23%;
-    --primary: 219 18% 81%;
-    --primary-foreground: 219 18% 21%;
-    --secondary: 219 8% 25%;
-    --secondary-foreground: 219 8% 85%;
-    --accent: 216 13% 30%;
-    --accent-foreground: 216 13% 90%;
-    --destructive: 3 95% 48%;
-    --destructive-foreground: 0 0% 100%;
-    --ring: 219 18% 81%;
-    --radius: 0.5rem;
-  }
-}
-
-@layer base {
   * {
     @apply border-border;
   }
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+:root {
+  /* Card component background and text color */
+  --card: 1 5% 5%;
+  --card-foreground: 219 18% 76%;
+
+  /* Section border color */
+  --border: 300, 100%, 30%;
+
+  --radius: 0.5rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: 1 00% 00%;
+    --foreground: 216 10% 80%;
+
+    /* Code component radius, background and text color */
+    --accent: 216 13% 30%;
+    --accent-foreground: 216 13% 90%;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --background: 0 0% 95%;
+    --foreground: 0 0% 0%;
+
+    /* Code component radius, background and text color */
+    --accent: 1 00% 30%;
+    --accent-foreground: 1 00% 00%;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}
+@media (prefers-color-scheme: light) {
+  html {
+    color-scheme: light;
   }
 }
 

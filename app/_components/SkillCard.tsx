@@ -19,7 +19,7 @@ export const SkillCard = (props: {
           />
         </div>
           <p className="text-lg font-semibold">{props.title}</p>
-          <p className="text-sm text-muted-foreground">{props.description}</p>
+          <p className="text-sm">{props.description}</p>
       </div>
     </Card>
   );

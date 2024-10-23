@@ -9,7 +9,7 @@ export const Skill = () => {
     <Section className="flex min-md:flex-col items-start gap-4 mt-4">
       <div className="w-full">
         <Card className="p-4 gap-2">
-          <p className="text-lg text-muted-foreground">Soft skills</p>
+          <p className="text-lg">Soft skills</p>
           <div className="flex max-md:flex-col min-md:flex-row">
             {SKILLS.map((skill, index) => (
               <SkillCard key={index} {...skill} />

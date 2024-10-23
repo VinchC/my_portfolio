@@ -17,7 +17,7 @@ export const Project = (props: ProjectProps) => {
       <div>
         <p className="text-md font-semibold">{props.title}</p>
 
-        <p className="text-xs text-muted-foreground">{props.description}</p>
+        <p className="text-xs">{props.description}</p>
       </div>
     </Link>
   );

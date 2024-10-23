@@ -13,18 +13,17 @@ export const Work = (props: WorkProps) => {
       <img
         src={props.picture}
         className="w-12 h-auto bg-white object-contain"
-        // style={{ width: 48, height: "auto", background: "white" }}
         alt={props.alt}
       />
       <div>
         <div>
           <p className="text-sm font-semibold">{props.role}</p>
         </div>
-        <p className="text-xs text-muted-foreground">{props.title}</p>
+        <p className="text-xs">{props.title}</p>
       </div>
       <div className="ml-auto">
-        <p className="text-xs text-end text-muted-foreground">{props.date}</p>
-          {props.training && <Badge className="text-xs border border-lime-500 text-lime-500" variant="outline">Training</Badge>}
+        <p className="text-xs text-end">{props.date}</p>
+          {props.training && <Badge className="text-xs border border-lime-400 text-lime-400" variant="outline">Training</Badge>}
       </div>
     </Link>
   );
