@@ -65,7 +65,7 @@ export const Header = ({
             )}
           >
             {language === "English" ? (
-              <Code className="inline-flex items-center gap-1 border-none">
+              <Code className="border-none">
                 <img
                   src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Ensign_of_France.svg/langfr-225px-Ensign_of_France.svg.png"
                   style={{ width: 16, height: "auto" }}
@@ -73,7 +73,7 @@ export const Header = ({
                 />
               </Code>
             ) : (
-              <Code className="inline-flex items-center gap-1 border-none">
+              <Code className="border-none">
                 <img
                   src="https://upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg"
                   style={{ width: 16, height: "auto" }}

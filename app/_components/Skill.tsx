@@ -11,7 +11,7 @@ export const Skill = () => {
 
   return (
     <>
-      <Section className="flex min-md:flex-col items-start gap-4 mt-4">
+      <Section className="section">
         <div className="w-full">
           <Card className="p-4 gap-2">
             <p className="text-lg">Soft skills</p>

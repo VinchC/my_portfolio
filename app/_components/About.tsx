@@ -51,7 +51,7 @@ export const About = () => {
         <div className="flex-[2] flex justify-around max-md:m-auto ml-auto">
           <img
             src={portrait.src}
-            className="flex w-56 h-auto max-w-xs max-md:w-40 rounded-full border border-border"
+            className="portrait"
             alt="Vincent Cantonnet's portrait"
           />
         </div>
@@ -81,7 +81,7 @@ export const About = () => {
         <div className="flex-[2] flex justify-around max-md:m-auto ml-auto">
           <img
             src={portrait.src}
-            className="flex w-56 h-auto max-w-xs max-md:w-40 rounded-full border border-border"
+            className="portrait"
             alt="Vincent Cantonnet's portrait"
           />
         </div>

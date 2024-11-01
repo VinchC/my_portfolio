@@ -12,7 +12,7 @@ export const Work = (props: WorkProps) => {
     <Link
       target="_blank"
       href={props.url}
-      className="inline-flex items-center gap-4 hover:bg-accent/40 transition-colors h-24 p-1 rounded-lg"
+      className="logo"
     >
       <img
         src={props.picture}
@@ -20,9 +20,7 @@ export const Work = (props: WorkProps) => {
         alt={props.alt}
       />
       <div>
-        <div>
           <p className="text-sm font-semibold">{props.role}</p>
-        </div>
         <p className="text-xs">{props.title}</p>
       </div>
       <div className="ml-auto text-end">
