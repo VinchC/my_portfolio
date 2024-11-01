@@ -7,7 +7,7 @@ export const Education = (props: EducationProps) => {
     <Link
       target="_blank"
       href={props.url}
-      className="inline-flex items-center gap-2 hover:bg-accent/40 transition-colors h-24 p-1 rounded-lg"
+      className="logo"
     >
       <img
         src={props.picture}

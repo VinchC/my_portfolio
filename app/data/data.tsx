@@ -20,11 +20,11 @@ import communication from "../../public/images/communication.png";
 export const SIDE_PROJECTS: ProjectProps[] = [
   {
     Logo: wcag.src,
-    title: "Access4All",
+    title: "Jaimepaslesmaths",
     description:
-      "A website which aim is to work on the good practices regarding accessibility, developped with Next, React, Typescript - work in progress.",
-    url: "https://github.com/VinchC/access",
-    alt: "WCAG logo",
+      "A website which aim is to supply a few courses in mathematics (8th grade) while implmenting the good practices regarding accessibility, developped with Next.js 15, Typescript, Sanity and GROQ - work in progress.",
+    url: "https://github.com/VinchC/next_type_tail",
+    alt: "Mathematics logo",
   },
   {
     Logo: graphql.src,
@@ -54,11 +54,11 @@ export const SIDE_PROJECTS: ProjectProps[] = [
 export const SIDE_PROJECTSFR: ProjectProps[] = [
   {
     Logo: wcag.src,
-    title: "Access4All",
+    title: "Jaimepaslesmaths",
     description:
-      "Un site dont le but est d'améliorer mes compétences en matière d'accessibilité et de sécurité, développé avec Next, React, Typescript - travail en cours.",
-    url: "https://github.com/VinchC/access",
-    alt: "WCAG logo",
+      "Un site dont le but est de proposer quelques cours de maths niveau 4ème tout en implémentant les bonnes pratiques d'accessibilité, développé avec Next.js 15, Typescript, Sanity et GROQ - travail en cours.",
+    url: "https://github.com/VinchC/next_type_tail",
+    alt: "Mathematics logo",
   },
   {
     Logo: graphql.src,
