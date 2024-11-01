@@ -15,7 +15,7 @@ export const About = () => {
   return (
     <>
     { language === "English" ? (
-      <Section className="flex max-md:flex-col items-center gap-4 mt-4">
+      <Section className="section">
         <div className="flex-[3] flex flex-col gap-2 w-full">
           <h3 className="text-5xl font-caption">Full Stack Developper</h3>
           <p className="text-foreground">
@@ -57,7 +57,7 @@ export const About = () => {
         </div>
       </Section>
     ) : (
-      <Section className="flex max-md:flex-col items-center gap-4 mt-4">
+      <Section className="section">
         <div className="flex-[3] flex flex-col gap-2 w-full">
           <h3 className="text-5xl font-caption">Full Stack Developper</h3>
           <p className="text-foreground">Ayant occupé la fonction de Teaching Assistant dans le cadre de ma formation de Concepteur développeur d'applications en alternance, expérience qui a été riche d'enseignements, je souhaite à présent mettre à profit mes compétences en tant que Développeur Full Stack dans le cadre de projets ambitieux et variés.</p>

@@ -6,7 +6,6 @@ import LanguageContext from "../contexts/LanguageContext";
 import { useContext } from "react";
 
 export const Work = (props: WorkProps) => {
-
   const language = useContext(LanguageContext);
 
   return (
@@ -26,9 +25,16 @@ export const Work = (props: WorkProps) => {
         </div>
         <p className="text-xs">{props.title}</p>
       </div>
-      <div className="ml-auto">
-        <p className="text-xs text-end">{props.date}</p>
-          {props.training && <Badge className="text-xs border border-lime-600 text-lime-600" variant="outline">Training</Badge>}
+      <div className="ml-auto text-end">
+        <p className="text-xs">{props.date}</p>
+        {props.training && (
+          <Badge
+            className="text-xs border border-lime-600 text-lime-600"
+            variant="outline"
+          >
+            {language === "English" ? "Training" : "Formation"}
+          </Badge>
+        )}
       </div>
     </Link>
   );
