@@ -44,7 +44,7 @@ export const Core = () => {
             )}
           </Card>
         </div>
-        <div className="flex-[2] w-full flex flex-col gap-4">
+        <div className="flex-[2] w-full flex flex-col gap-6">
           <Card className="card">
             {language === "English" ? (
               <>

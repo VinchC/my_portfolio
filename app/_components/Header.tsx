@@ -18,8 +18,8 @@ export const Header = ({
   toggleLanguage: any;
 }) => {
   return (
-    <header className="sticky top-0 py-4 bg-card">
-      <Section className="flex items-baseline">
+    <header className="fixed w-full top-0 py-4 bg-card border-b-[2px] border-background">
+      <Section className="flex items-baseline ">
         <h1 className="text-lg font-bold text-card-foreground">
           Vincent Cantonnet
         </h1>
