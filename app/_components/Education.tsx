@@ -1,8 +1,11 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
 import { EducationProps } from "../types";
+import { useContext } from "react";
+import LanguageContext from "../contexts/LanguageContext";
 
 export const Education = (props: EducationProps) => {
+  const language = useContext(LanguageContext);
   return (
     <Link
       target="_blank"
@@ -21,7 +24,7 @@ export const Education = (props: EducationProps) => {
         <p className="text-xs">{props.school}</p>
       </div>
       <div className="ml-auto">
-        <p className="text-xs text-end">{props.date}</p>
+        <p className="text-xs text-end">{language === "English" ? props.dateEn : props.dateFr}</p>
       </div>
     </Link>
   );

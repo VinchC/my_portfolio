@@ -1,7 +1,8 @@
 export type ProjectProps = {
   Logo: string;
   title: string;
-  description: string;
+  descriptionFr: string;
+  descriptionEn: string;
   url: string;
   alt: string;
 };
@@ -19,7 +20,8 @@ export type WorkProps = {
 export type ContactProps = {
   image: string;
   title: string;
-  description: string;
+  descriptionFr: string;
+  descriptionEn: string;
 };
 
 export type SkillProps = {
@@ -34,6 +36,7 @@ export type EducationProps = {
   picture: string;
   alt: string;
   title: string;
-  date: string;
+  dateEn: string;
+  dateFr: string;
   school: string;
 };

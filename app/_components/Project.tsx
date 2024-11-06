@@ -1,8 +1,12 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
 import { ProjectProps } from "../types";
+import { useContext } from "react";
+import LanguageContext from "../contexts/LanguageContext";
 
 export const Project = (props: ProjectProps) => {
+  const language = useContext(LanguageContext);
+
   return (
     <Link
       target="_blank"
@@ -17,7 +21,7 @@ export const Project = (props: ProjectProps) => {
       <div>
         <p className="text-md font-semibold">{props.title}</p>
 
-        <p className="text-xs">{props.description}</p>
+        <p className="text-xs">{language === "English" ? props.descriptionEn : props.descriptionFr}</p>
       </div>
     </Link>
   );
