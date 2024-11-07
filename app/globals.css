@@ -11,19 +11,19 @@ body {
     text-wrap: balance;
   }
   .section {
-    @apply flex max-md:flex-col items-center gap-4 mt-4
+    @apply flex max-md:flex-col items-center gap-4 mt-4;
   }
   .portrait {
-    @apply flex w-56 h-auto max-w-xs max-md:w-40 rounded-full border border-border
+    @apply flex w-56 h-auto max-w-xs max-md:w-40 rounded-full border border-border;
   }
   .card {
-    @apply w-full p-4 flex flex-col gap-2
+    @apply w-full p-4 flex flex-col gap-2;
   }
   .accent {
-    @apply bg-accent/30 font-mono border hover:bg-accent/50 transition-colors border-border px-1 py-0.5 text-accent-foreground rounded-lg
+    @apply bg-accent/30 font-mono border hover:bg-accent/50 transition-colors border-border px-1 py-0.5 text-accent-foreground rounded-lg;
   }
   .logo {
-    @apply inline-flex items-center gap-2 hover:bg-accent/40 transition-colors h-24 p-1 rounded-lg
+    @apply inline-flex items-center gap-2 hover:bg-accent/40 transition-colors h-24 p-1 rounded-lg;
   }
 }
 
@@ -39,38 +39,29 @@ body {
 :root {
   /* Section border color */
   --border: 300, 100%, 30%;
-
   --radius: 0.5rem;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: 1 00% 00%;
-    --foreground: 216 10% 80%;
+.dark {
+  --background: 1 00% 00%;
+  --foreground: 216 10% 80%;
 
-    /* Card component background and text color */
-    --card: 0 0% 95%;
-    --card-foreground: 0 0% 0%;
+  /* Card component background and text color */
+  --card: 0 0% 95%;
+  --card-foreground: 0 0% 0%;
 
-    /* Code component radius, background and text color */
-    --accent: 216 13% 30%;
-    --accent-foreground: 216 13% 90%;
-  }
+  /* Code component radius, background and text color */
+  --accent: 216 13% 30%;
+  --accent-foreground: 216 13% 90%;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    --background: 0 0% 95%;
-    --foreground: 0 0% 0%;
-
-    /* Card component background and text color */
-    --card: 0 0% 0%;
-    --card-foreground: 0 0% 95%;
-
-    /* Code component radius, background and text color */
-    --accent: 1 00% 30%;
-    --accent-foreground: 1 00% 00%;
-  }
+.light {
+  --background: 0 0% 95%;
+  --foreground: 0 0% 0%;
+  --card: 0 0% 0%;
+  --card-foreground: 0 0% 95%;
+  --accent: 1 00% 30%;
+  --accent-foreground: 1 00% 00%;
 }
 
 @media (prefers-color-scheme: dark) {

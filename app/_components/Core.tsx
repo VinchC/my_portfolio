@@ -4,10 +4,8 @@ import { Section } from "./Section";
 import { Work } from "./Work";
 import {
   SIDE_PROJECTS,
-  SIDE_PROJECTSFR,
   WORKS,
   EDUCATION,
-  EDUCATIONFR,
   WORKSFR,
 } from "../data/data";
 import { Project } from "./Project";
@@ -23,7 +21,6 @@ export const Core = () => {
       <Section className="section items-start">
         <div className="flex-[2] w-full">
           <Card className="card">
-            {language === "English" ? (
               <>
                 <p className="text-lg">Projects</p>
                 <div className="flex flex-col gap-3">
@@ -32,19 +29,9 @@ export const Core = () => {
                   ))}
                 </div>
               </>
-            ) : (
-              <>
-                <p className="text-lg">Projets</p>
-                <div className="flex flex-col gap-3">
-                  {SIDE_PROJECTSFR.map((project, index) => (
-                    <Project key={index} {...project} />
-                  ))}
-                </div>
-              </>
-            )}
           </Card>
         </div>
-        <div className="flex-[2] w-full flex flex-col gap-4">
+        <div className="flex-[2] w-full flex flex-col gap-6">
           <Card className="card">
             {language === "English" ? (
               <>
@@ -69,7 +56,6 @@ export const Core = () => {
             )}
           </Card>
           <Card className="card">
-            {language === "English" ? (
               <>
                 <p className="text-lg p-1">Certificate</p>
                 <div className="flex flex-col">
@@ -78,18 +64,6 @@ export const Core = () => {
                   ))}
                 </div>
               </>
-            ) : (
-              <>
-                <p className="text-lg p-1">
-                  Titre professionnel
-                </p>
-                <div className="flex flex-col">
-                  {EDUCATIONFR.map((education, index) => (
-                    <Education key={index} {...education} />
-                  ))}
-                </div>
-              </>
-            )}
           </Card>
         </div>
       </Section>
