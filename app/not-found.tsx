@@ -4,7 +4,7 @@ import "./styles/not-found.css";
 export default function Custom404() {
   return (
     <>
-      <section className="error-container">
+      <section className="notfound-container">
         <span>4</span>
         <span>
           <span className="screen-reader-text">0</span>
