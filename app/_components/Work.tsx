@@ -27,7 +27,7 @@ export const Work = (props: WorkProps) => {
         <p className="text-xs">{props.date}</p>
         {props.training && (
           <Badge
-            className="text-xs border border-lime-600 text-lime-600"
+            className="text-xs border border-lime-800 text-lime-800"
             variant="outline"
           >
             {language === "English" ? "Training" : "Formation"}
