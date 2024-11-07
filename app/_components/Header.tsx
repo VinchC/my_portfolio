@@ -9,6 +9,7 @@ import { LinkedInIcon } from "./icons/LinkedInIcon";
 import { Mail } from "lucide-react";
 import { Code } from "./Code";
 import CV from "./CV";
+import ThemeSwitch from "./ThemeSwitch";
 
 export const Header = ({
   language,
@@ -81,6 +82,14 @@ export const Header = ({
                 />
               </Code>
             )}
+          </button>
+          <button
+            className={cn(
+              buttonVariants({ variant: "outline" }),
+              "size-8 p-0 border-border bg-black"
+            )}
+          >
+            <ThemeSwitch />
           </button>
         </ul>
       </Section>

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { Anek_Telugu } from "next/font/google";
 import "./globals.css";
+import Providers from "./providers";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -31,11 +32,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="h-full">
+    <html lang="en" className="h-full" suppressHydrationWarning>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${AnekTelugu.variable} h-full bg-background text-foreground`}
       >
-        {children}
+        <Providers>{children}</Providers>
       </body>
     </html>
   );
