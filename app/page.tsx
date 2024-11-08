@@ -9,6 +9,7 @@ import { Footer } from "./_components/Footer";
 import SkipLink from "./_components/SkipLink";
 import { useState } from "react";
 import LanguageContext from "./contexts/LanguageContext";
+import { Contact } from "./_components/Contact";
 
 export default function Home() {
   const [language, setLanguage] = useState("English");
@@ -32,7 +33,7 @@ export default function Home() {
           <Spacing size="sm" />
           <Skill />
           <Spacing size="sm" />
-          <Footer />
+           <Footer />
         </main>
       </LanguageContext.Provider>
     </>

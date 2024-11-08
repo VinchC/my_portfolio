@@ -25,6 +25,12 @@ body {
   .logo {
     @apply inline-flex items-center gap-2 hover:bg-accent/40 transition-colors h-24 p-1 rounded-lg;
   }
+  .buttonSmall {
+    @apply size-8 p-0 border-border bg-black text-gray-200;
+  }
+  .buttonLarge {
+    @apply h-8 w-20 p-0 border-border bg-black text-gray-200;
+  }
 }
 
 @layer base {

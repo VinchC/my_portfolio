@@ -1,23 +1,27 @@
 /* eslint-disable @next/next/no-img-element */
-import Link from "next/link";
-import { Section } from "./Section";
-import portrait from "../../public/images/portrait.jpeg";
-import { buttonVariants, cn } from "@/components/ui/button";
-import { AccessibleIcon } from "@radix-ui/react-accessible-icon";
-import { Mail } from "lucide-react";
-import { GithubIcon } from "./icons/GithubIcon";
-import { LinkedInIcon } from "./icons/LinkedInIcon";
 
-export const Footer = () => {
+import { Card } from "@/components/ui/card";
+import { Mail } from "lucide-react";
+import { LinkedInIcon } from "./icons/LinkedInIcon";
+import Link from "next/link";
+import { cn } from "@/lib/utils";
+import { buttonVariants } from "@/components/ui/button";
+import portrait from "../../public/images/portrait.jpeg";
+import { AccessibleIcon } from "@radix-ui/react-accessible-icon";
+import { GithubIcon } from "./icons/GithubIcon";
+import { Section } from "./Section";
+
+export const Contact = () => {
   return (
-    <footer className="bg-card mt-4" id="contact">
-      <Section className="py-8 ">
-        <div className="hover:bg-accent/50 transition-colors flex justify-center items-center gap-8">
+    <Section className="section">
+      <div className="w-full" id="soft">
+        <p className="text-lg">Contact</p>
+        <Card className="p-3 h-24 hover:bg-accent/50 transition-colors flex items-center gap-4">
           <div className="relative">
             <img
               src={portrait.src}
               alt="Portrait of Vincent Cantonnet"
-              className="w-8 h-8 border border-border rounded-full object-contain"
+              className="w-10 h-10 rounded-full object-contain"
             />
           </div>
           <Link
@@ -25,7 +29,7 @@ export const Footer = () => {
             href="mailto:vinch.cm@gmail.com"
             className={cn(
               buttonVariants({ variant: "outline" }),
-              "buttonSmall"
+              "size-8 p-0 border-border bg-black"
             )}
           >
             <AccessibleIcon label="send mail">
@@ -37,7 +41,7 @@ export const Footer = () => {
             href="https://github.com/VinchC"
             className={cn(
               buttonVariants({ variant: "outline" }),
-              "buttonSmall"
+              "size-8 p-0 border-border bg-black"
             )}
           >
             <AccessibleIcon label="link to GitHub page">
@@ -49,19 +53,15 @@ export const Footer = () => {
             href="https://www.linkedin.com/in/vincent-cantonnet/"
             className={cn(
               buttonVariants({ variant: "outline" }),
-              "buttonSmall"
+              "size-8 p-0 border-border bg-black"
             )}
           >
             <AccessibleIcon label="link to LinkedIn profile">
               <LinkedInIcon size={16} className="text-foreground" />
             </AccessibleIcon>
           </Link>
-        </div>
-        <p className="text-sm text-card-foreground text-center py-4">
-          Copyrights 2024 Vincent Cantonnet -{" "}
-          <Link href="mailto:vinch.cm@gmail.com">vinch.cm@gmail.com</Link>
-        </p>
-      </Section>
-    </footer>
+        </Card>
+      </div>
+    </Section>
   );
 };
