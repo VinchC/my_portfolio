@@ -2,14 +2,10 @@
 "use client";
 
 import { cn, buttonVariants } from "@/components/ui/button";
-import { Section } from "./Section";
-import { GithubIcon } from "./icons/GithubIcon";
+import { Section } from "./utils/Section";
 import Link from "next/link";
-import { LinkedInIcon } from "./icons/LinkedInIcon";
-import { Mail } from "lucide-react";
-import { Code } from "./Code";
 import CV from "./CV";
-import ThemeSwitch from "./ThemeSwitch";
+import ThemeSwitch from "./utils/ThemeSwitch";
 import { AccessibleIcon } from "@radix-ui/react-accessible-icon";
 
 export const Header = ({

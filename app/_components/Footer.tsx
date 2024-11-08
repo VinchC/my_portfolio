@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
-import { Section } from "./Section";
+import { Section } from "./utils/Section";
 import portrait from "../../public/images/portrait.jpeg";
 import { buttonVariants, cn } from "@/components/ui/button";
 import { AccessibleIcon } from "@radix-ui/react-accessible-icon";
@@ -17,7 +17,7 @@ export const Footer = () => {
             <img
               src={portrait.src}
               alt="Portrait of Vincent Cantonnet"
-              className="w-8 h-8 border border-border rounded-full object-contain"
+              className="w-8 h-8 styledBorder border-border rounded-full object-contain"
             />
           </div>
           <Link

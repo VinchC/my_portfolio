@@ -9,7 +9,7 @@ import { buttonVariants } from "@/components/ui/button";
 import portrait from "../../public/images/portrait.jpeg";
 import { AccessibleIcon } from "@radix-ui/react-accessible-icon";
 import { GithubIcon } from "./icons/GithubIcon";
-import { Section } from "./Section";
+import { Section } from "./utils/Section";
 
 export const Contact = () => {
   return (
@@ -29,7 +29,7 @@ export const Contact = () => {
             href="mailto:vinch.cm@gmail.com"
             className={cn(
               buttonVariants({ variant: "outline" }),
-              "size-8 p-0 border-border bg-black"
+              "buttonSmall"
             )}
           >
             <AccessibleIcon label="send mail">
@@ -41,7 +41,7 @@ export const Contact = () => {
             href="https://github.com/VinchC"
             className={cn(
               buttonVariants({ variant: "outline" }),
-              "size-8 p-0 border-border bg-black"
+              "buttonSmall"
             )}
           >
             <AccessibleIcon label="link to GitHub page">
@@ -53,7 +53,7 @@ export const Contact = () => {
             href="https://www.linkedin.com/in/vincent-cantonnet/"
             className={cn(
               buttonVariants({ variant: "outline" }),
-              "size-8 p-0 border-border bg-black"
+              "buttonSmall"
             )}
           >
             <AccessibleIcon label="link to LinkedIn profile">

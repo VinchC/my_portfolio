@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import { Card } from "@/components/ui/card";
-import { Section } from "./Section";
+import { Section } from "./utils/Section";
 import { Work } from "./Work";
 import { SIDE_PROJECTS, WORKS, EDUCATION, WORKSFR } from "../data/data";
 import { Project } from "./Project";
