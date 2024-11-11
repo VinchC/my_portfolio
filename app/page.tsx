@@ -26,7 +26,6 @@ export default function Home() {
 
       <LanguageContext.Provider value={language}>
         <main id="maincontent">
-          <BackToTopButton />
           <Spacing size="sm" />
           <About />
           <Spacing size="sm" />
