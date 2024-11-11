@@ -17,7 +17,7 @@ export const Core = () => {
           <div className="flex-[2] w-full" id="projects">
             <Card className="card">
               <>
-                <p className="text-lg">Projects</p>
+                <p className="text-lg">{language === "English" ? "Projects" : "Projets"}</p>
                 <div className="flex flex-col gap-3">
                   {SIDE_PROJECTS.map((project, index) => (
                     <Project key={index} {...project} />
@@ -50,7 +50,7 @@ export const Core = () => {
           </Card>
           <Card className="card">
             <>
-              <p className="text-lg p-1">Certificate</p>
+              <p className="text-lg p-1">{language === "English" ? "Certificate" : "Titre professionnel"}</p>
               <div className="flex flex-col">
                 {EDUCATION.map((education, index) => (
                   <Education key={index} {...education} />

@@ -17,7 +17,7 @@ export default function CV() {
         onClick={onButtonClick}
         className={cn(
           buttonVariants({ variant: "outline" }),
-          "buttonSmall"
+          "buttonSmall max-md:buttonLarge"
         )}
       >
         CV
