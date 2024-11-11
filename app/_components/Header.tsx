@@ -40,10 +40,7 @@ export const Header = ({
               <Menu />
             </button>
           </div>
-          <div className={isOpen ? "hidden" : ""}>
-            {/* <div className={isOpen ? "" : "hidden"}> */}
-            {/* <ul className="flex items-center gap-2 max-md:flex-col"> */}
-            <ul className="flex items-center gap-2 max-md:flex-col">
+            <ul className={`flex items-center gap-2 max-md:flex-col ${!isOpen ? "max-md:invisible" : "max-md:visible"}`}>
               <Link
                 href="#projects"
                 className={cn(
@@ -116,7 +113,6 @@ export const Header = ({
               </button>
             </ul>
           </div>
-        </div>
       </Section>
     </header>
   );
