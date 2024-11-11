@@ -1,10 +1,10 @@
 /* eslint-disable @next/next/no-img-element */
 /* eslint-disable react/no-unescaped-entities */
-import { Section } from "./Section";
+import { Section } from "./utils/Section";
 import portrait from "../../public/images/portrait.jpeg";
 import { GithubIcon } from "./icons/GithubIcon";
 import Link from "next/link";
-import { Code } from "./Code";
+import { Code } from "./utils/Code";
 import { useContext } from "react";
 import LanguageContext from "../contexts/LanguageContext";
 
@@ -14,8 +14,9 @@ export const About = () => {
   return (
     <>
       <Section className="section">
-        <div className="flex-[3] flex flex-col gap-2 w-full mt-16">
-          <h3 className="text-5xl font-caption">Full Stack Developper</h3>
+        <div className="flex-[3] flex flex-col gap-2 w-full mt-8">
+          <h2 className="text-5xl font-caption">Full Stack Developper</h2>
+          <h3 className="text-3xl font-caption mt-4">Hello !</h3>
           {language === "English" ? (
             <>
               <p className="text-foreground">
@@ -84,13 +85,6 @@ export const About = () => {
               </p>
             </>
           )}
-        </div>
-        <div className="flex-[2] flex justify-around max-md:m-auto ml-auto">
-          <img
-            src={portrait.src}
-            className="portrait"
-            alt="Vincent Cantonnet's portrait"
-          />
         </div>
       </Section>
     </>

@@ -14,22 +14,31 @@ body {
     @apply flex max-md:flex-col items-center gap-4 mt-4;
   }
   .portrait {
-    @apply flex w-56 h-auto max-w-xs max-md:w-40 rounded-full border border-border;
+    @apply flex w-56 h-auto max-w-xs max-md:w-40 rounded-full styledBorder;
   }
   .card {
-    @apply w-full p-4 flex flex-col gap-2;
+    @apply w-full p-4 flex flex-col gap-2 styledBorder;
   }
   .accent {
-    @apply bg-accent/30 font-mono border hover:bg-accent/50 transition-colors border-border px-1 py-0.5 text-accent-foreground rounded-lg;
+    @apply bg-accent/30 font-mono hover:bg-accent/50 transition-colors styledBorder px-1 py-0.5 text-accent-foreground rounded-lg;
   }
   .logo {
     @apply inline-flex items-center gap-2 hover:bg-accent/40 transition-colors h-24 p-1 rounded-lg;
+  }
+  .buttonSmall {
+    @apply size-8 p-0 styledBorder bg-black text-gray-200;
+  }
+  .buttonLarge {
+    @apply h-8 w-20 p-0 styledBorder bg-black text-gray-200;
+  }
+  .styledBorder {
+    @apply border-tertiary border-2;
   }
 }
 
 @layer base {
   * {
-    @apply border-border;
+    @apply border-tertiary;
   }
   body {
     @apply bg-background text-foreground;
@@ -38,7 +47,7 @@ body {
 
 :root {
   /* Section border color */
-  --border: 300, 100%, 30%;
+  --tertiary: 300, 100%, 30%;
   --radius: 0.5rem;
 }
 
