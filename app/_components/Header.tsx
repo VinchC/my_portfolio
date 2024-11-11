@@ -18,7 +18,6 @@ export const Header = ({
   toggleLanguage: any;
 }) => {
   const [isOpen, setIsOpen] = useState(false);
-  console.log(isOpen);
 
   return (
     <header className="fixed w-full top-0 py-4 h-16 bg-card border-b-[2px] border-background">

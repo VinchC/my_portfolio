@@ -10,6 +10,7 @@ import SkipLink from "./_components/utils/SkipLink";
 import { useState } from "react";
 import LanguageContext from "./contexts/LanguageContext";
 import BackToTopButton from "./_components/utils/BackToTopButton";
+import { ContactForm } from "./_components/ContactForm";
 
 export default function Home() {
   const [language, setLanguage] = useState("English");
@@ -32,6 +33,8 @@ export default function Home() {
           <Core />
           <Spacing size="sm" />
           <Skill />
+          <Spacing size="sm" />
+          <ContactForm />
           <Spacing size="sm" />
           <Footer />
         </main>

@@ -10,29 +10,40 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+
   .section {
     @apply flex max-md:flex-col items-center gap-4 mt-4;
   }
+
   .portrait {
     @apply flex w-56 h-auto max-w-xs max-md:w-40 rounded-full styledBorder;
   }
+
   .card {
     @apply w-full p-4 flex flex-col gap-2 styledBorder;
   }
+
   .accent {
     @apply bg-accent/30 font-mono hover:bg-accent/50 transition-colors styledBorder px-1 py-0.5 text-accent-foreground rounded-lg;
   }
+
   .logo {
     @apply inline-flex items-center gap-2 hover:bg-accent/40 transition-colors h-24 p-1 rounded-lg;
   }
+
   .buttonSmall {
     @apply size-8 p-0 styledBorder bg-black text-gray-200;
   }
+
   .buttonLarge {
     @apply h-8 w-20 p-0 styledBorder bg-black text-gray-200;
   }
   .styledBorder {
-    @apply border-tertiary border-2;
+    @apply border-tertiary border-2 rounded-lg;
+  }
+
+  .inputForm {
+    @apply w-full rounded-md border border-gray-400 bg-white py-3 px-3 text-base text-gray-700 outline-none focus:border-tertiary focus:shadow-md mt-2;
   }
 }
 
