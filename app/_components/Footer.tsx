@@ -10,7 +10,7 @@ import { LinkedInIcon } from "./icons/LinkedInIcon";
 
 export const Footer = () => {
   return (
-    <footer className="bg-card mt-4" id="contact">
+    <footer className="bg-card mt-4">
       <Section className="py-8 ">
         <div className="hover:bg-accent/50 transition-colors flex justify-center items-center gap-8">
           <div className="relative">

@@ -9,8 +9,7 @@ import { Footer } from "./_components/Footer";
 import SkipLink from "./_components/utils/SkipLink";
 import { useState } from "react";
 import LanguageContext from "./contexts/LanguageContext";
-import BackToTopButton from "./_components/utils/BackToTopButton";
-import { ContactForm } from "./_components/ContactForm";
+import ContactForm from "./_components/ContactForm";
 
 export default function Home() {
   const [language, setLanguage] = useState("English");

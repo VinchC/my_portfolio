@@ -1,10 +1,9 @@
 'use client';
 
-import { useForm } from "react-hook-form";
 import { Section } from "./utils/Section";
 import { Card } from "@/components/ui/card";
-import { useContext } from "react";
 import LanguageContext from "../contexts/LanguageContext";
+import { useContext } from "react";
 
 export type FormData = {
   name: string;
@@ -12,23 +11,33 @@ export type FormData = {
   message: string;
 };
 
-export const ContactForm = () => {
+export default function ContactForm() {
   const language = useContext(LanguageContext);
 
-  const { register, handleSubmit } = useForm<FormData>();
-
-  function sendEmail(data: FormData) {
-    // TODO: send email
-    console.log(data);
-  }
-  function onSubmit(data: FormData) {
-    sendEmail(data);
+  async function handleSubmit(e: { preventDefault: () => void; currentTarget: HTMLFormElement | undefined; }) {
+    e.preventDefault();
+    const data: any = new FormData(e.currentTarget);
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'post',
+        body: new URLSearchParams(data),
+      });
+      if (!response.ok) {
+        throw new Error(`Invalid response: ${response.status}`);
+      }
+      alert('Thanks for contacting us, we will get back to you soon!');
+      console.log(data);
+    } catch (err) {
+      console.error(err);
+      alert("We can't submit the form, try again later?");
+    }
   }
 
   return (
+    <>
     <Section className="section">
       <Card className="card">
-        <form onSubmit={handleSubmit(onSubmit)}>
+        <form onSubmit={handleSubmit} id="contact">
           <div className="mb-4">
             <label
               aria-labelledby="name"
@@ -38,15 +47,17 @@ export const ContactForm = () => {
               {language === "English" ? "Full Name" : "Nom et prénom"}
             </label>
             <input
+              id="name"
               type="text"
+              name="name"
               placeholder={
                 language === "English" ? "Full Name" : "Nom et prénom"
               }
               className="inputForm"
-              {...register("name", { required: true })}
+              required
             />
           </div>
-          <div className="mb-5">
+          <div className="mb-4">
             <label
               aria-labelledby="email"
               htmlFor="email"
@@ -55,10 +66,12 @@ export const ContactForm = () => {
               Email
             </label>
             <input
+              id="email"
               type="email"
+              name="email"
               placeholder="your@email.com"
               className="inputForm"
-              {...register("email", { required: true })}
+              required
             />
           </div>
           <div className="mb-5">
@@ -70,14 +83,16 @@ export const ContactForm = () => {
               Message
             </label>
             <textarea
+            id="message"
               rows={4}
+              name="message"
               placeholder={
                 language === "English"
                   ? "Type your message"
                   : "Ecrivez votre message"
               }
               className="inputForm resize-none"
-              {...register("message", { required: true })}
+              required
             ></textarea>
           </div>
           <div>
@@ -88,5 +103,6 @@ export const ContactForm = () => {
         </form>
       </Card>
     </Section>
+    </>
   );
 };
