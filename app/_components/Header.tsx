@@ -2,13 +2,13 @@
 "use client";
 
 import { cn, buttonVariants } from "@/components/ui/button";
-import { Section } from "./Section";
-import { GithubIcon } from "./icons/GithubIcon";
+import { Section } from "./utils/Section";
 import Link from "next/link";
-import { LinkedInIcon } from "./icons/LinkedInIcon";
-import { Mail } from "lucide-react";
-import { Code } from "./Code";
 import CV from "./CV";
+import ThemeSwitch from "./utils/ThemeSwitch";
+import { AccessibleIcon } from "@radix-ui/react-accessible-icon";
+import { useState } from "react";
+import { Menu } from "lucide-react";
 
 export const Header = ({
   language,
@@ -17,72 +17,116 @@ export const Header = ({
   language: string;
   toggleLanguage: any;
 }) => {
-  return (
-    <header className="sticky top-0 py-4 bg-card">
-      <Section className="flex items-baseline">
-        <h1 className="text-lg font-bold text-card-foreground">
-          Vincent Cantonnet
-        </h1>
-        <div className="flex-1" />
+  const [isOpen, setIsOpen] = useState(false);
+  console.log(isOpen);
 
-        <ul className="flex items-center gap-2">
-          <CV />
-          <Link
-            target="_blank"
-            href="mailto:vinch.cm@gmail.com"
-            className={cn(
-              buttonVariants({ variant: "outline" }),
-              "size-8 p-0 border-border bg-black"
-            )}
-          >
-            <Mail size={16} className="text-white" />
-          </Link>
-          <Link
-            target="_blank"
-            href="https://github.com/VinchC"
-            className={cn(
-              buttonVariants({ variant: "outline" }),
-              "size-8 p-0 border-border bg-black"
-            )}
-          >
-            <GithubIcon size={16} className="text-foreground" />
-          </Link>
-          <Link
-            target="_blank"
-            href="https://www.linkedin.com/in/vincent-cantonnet/"
-            className={cn(
-              buttonVariants({ variant: "outline" }),
-              "size-8 p-0 border-border bg-black"
-            )}
-          >
-            <LinkedInIcon size={16} className="text-foreground" />
-          </Link>
-          <button
-            onClick={toggleLanguage}
-            className={cn(
-              buttonVariants({ variant: "outline" }),
-              "size-8 p-0 border-border bg-black"
-            )}
-          >
-            {language === "English" ? (
-              <Code className="inline-flex items-center gap-1 border-none">
-                <img
-                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Ensign_of_France.svg/langfr-225px-Ensign_of_France.svg.png"
-                  style={{ width: 16, height: "auto" }}
-                  alt="France flag"
-                />
-              </Code>
-            ) : (
-              <Code className="inline-flex items-center gap-1 border-none">
-                <img
-                  src="https://upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg"
-                  style={{ width: 16, height: "auto" }}
-                  alt="United Kingdom flag"
-                />
-              </Code>
-            )}
-          </button>
-        </ul>
+  return (
+    <header className="fixed w-full top-0 py-4 h-16 bg-card border-b-[2px] border-background">
+      <Section>
+        <nav className="flex">
+          <h1 className="text-lg font-bold text-card-foreground">
+            Vincent Cantonnet
+          </h1>
+          <div className="flex-1" />
+
+          <div className="flex-col">
+            <div className="md:hidden flex justify-end items-center">
+              <button
+                onClick={() => {
+                  isOpen ? setIsOpen(false) : setIsOpen(true);
+                }}
+                type="button"
+                className="text-tertiary"
+              >
+                <Menu />
+              </button>
+            </div>
+            <div
+              className={
+                !isOpen
+                  ? "max-md:invisible"
+                  : "w-[100px] bg-card rounded-sm p-2 mr-0"
+              }
+            >
+              <ul
+                className={`flex items-center gap-2 max-md:flex-col ${
+                  !isOpen ? "max-md:invisible" : "max-md:visible"
+                }`}
+              >
+                <Link
+                  href="#projects"
+                  className={cn(
+                    buttonVariants({ variant: "outline" }),
+                    "buttonLarge"
+                  )}
+                >
+                  {language === "English" ? "Projects" : "Projets"}
+                </Link>
+                <Link
+                  href="#work"
+                  className={cn(
+                    buttonVariants({ variant: "outline" }),
+                    "buttonLarge"
+                  )}
+                >
+                  {language === "English" ? "Work exp." : "Carrière"}
+                </Link>
+                <Link
+                  href="#soft"
+                  className={cn(
+                    buttonVariants({ variant: "outline" }),
+                    "buttonLarge"
+                  )}
+                >
+                  Soft skills
+                </Link>
+                <Link
+                  href="#contact"
+                  className={cn(
+                    buttonVariants({ variant: "outline" }),
+                    "buttonLarge"
+                  )}
+                >
+                  Contact
+                </Link>
+                <AccessibleIcon label="download CV">
+                  <CV />
+                </AccessibleIcon>
+                <button
+                  aria-label="switch the language between English and French"
+                  onClick={toggleLanguage}
+                  className={cn(
+                    buttonVariants({ variant: "outline" }),
+                    "buttonSmall max-md:buttonLarge"
+                  )}
+                >
+                  {language === "English" ? (
+                    <img
+                      src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Ensign_of_France.svg/langfr-225px-Ensign_of_France.svg.png"
+                      style={{ width: 16, height: "auto" }}
+                      alt="France flag"
+                    />
+                  ) : (
+                    <img
+                      src="https://upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg"
+                      style={{ width: 16, height: "auto" }}
+                      alt="United Kingdom flag"
+                    />
+                  )}
+                </button>
+                <button
+                  aria-label="switch the mode from dark to light (os prefrences by default)"
+                  className={cn(
+                    buttonVariants({ variant: "outline" }),
+                    "buttonSmall max-md:buttonLarge"
+                  )}
+                >
+                  <ThemeSwitch />
+                </button>
+              </ul>
+            </div>
+          </div>
+        </nav>
       </Section>
     </header>
   );

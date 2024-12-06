@@ -5,6 +5,7 @@ import {
   SkillProps,
   WorkProps,
 } from "../types";
+import vues from "../../public/images/vues.jpeg";
 import php from "../../public/images/php_logo.png";
 import javascript from "../../public/images/javascript_logo.png";
 import graphql from "../../public/images/graphql_logo.png";
@@ -19,51 +20,21 @@ import communication from "../../public/images/communication.png";
 
 export const SIDE_PROJECTS: ProjectProps[] = [
   {
-    Logo: wcag.src,
-    title: "Access4All",
-    description:
-      "A website which aim is to work on the good practices regarding accessibility, developped with Next, React, Typescript - work in progress.",
-    url: "https://github.com/VinchC/access",
-    alt: "WCAG logo",
+    Logo: vues.src,
+    title: "Vues d'ici",
+    descriptionEn:
+    "A local newspaper website which informs about the activity of the XIXème and XXème districts in Paris, developped with Next.js and Typescript - work in progress.",
+    descriptionFr:
+    "Le site d'un journal local qui relate l'actualité des XIXème et XXème arrondissements de Paris, développé avec Next.js et Typescript - travail en cours.",
+    url: "https://github.com/VinchC/vues_d_ici",
+    alt: "Mathematics logo",
   },
   {
     Logo: graphql.src,
     title: "Eco City Guide",
-    description:
-      "Developped with my fellow students during my training, this is a map allowing to find eco-related places, developped with GraphQL and Tailwind.",
-    url: "https://github.com/Eco-Map/eco-city-guide",
-    alt: "GraphQL logo",
-  },
-  {
-    Logo: php.src,
-    title: "Wild Series",
-    description: "A website about series, developped with PHP and Symfony.",
-    url: "https://github.com/VinchC/wild_series",
-    alt: "PHP logo",
-  },
-  {
-    Logo: javascript.src,
-    title: "Secret Santa",
-    description:
-      "A little joke developped in HTML, CSS and JavaScript - hidden bonus inside!",
-    url: "https://vinchc-secret-santa.vercel.app/",
-    alt: "JavaScript logo",
-  },
-];
-
-export const SIDE_PROJECTSFR: ProjectProps[] = [
-  {
-    Logo: wcag.src,
-    title: "Access4All",
-    description:
-      "Un site dont le but est d'améliorer mes compétences en matière d'accessibilité et de sécurité, développé avec Next, React, Typescript - travail en cours.",
-    url: "https://github.com/VinchC/access",
-    alt: "WCAG logo",
-  },
-  {
-    Logo: graphql.src,
-    title: "Eco City Guide",
-    description:
+    descriptionEn:
+    "Developped with my fellow students during my training, this is a map allowing to find eco-related places, developped with GraphQL and Tailwind.",
+    descriptionFr:
       "Développé avec mes collègues pendant ma formation, ce site est une carte permettant de trouver des lieux éco-responsables, développé avec GraphQL et Tailwind.",
     url: "https://github.com/Eco-Map/eco-city-guide",
     alt: "GraphQL logo",
@@ -71,15 +42,18 @@ export const SIDE_PROJECTSFR: ProjectProps[] = [
   {
     Logo: php.src,
     title: "Wild Series",
-    description: "Un site de séries TV développé avec PHP et Symfony.",
+    descriptionEn: "A website about series, developped with PHP and Symfony.",
+    descriptionFr: "Un site de séries TV développé avec PHP et Symfony.",
     url: "https://github.com/VinchC/wild_series",
     alt: "PHP logo",
   },
   {
     Logo: javascript.src,
     title: "Secret Santa",
-    description:
-      "Un site humoristique developpé en HTML, CSS et JavaScript - avec un bonus caché!",
+    descriptionEn:
+      "A little joke developped in HTML, CSS and JavaScript - hidden bonus inside!",
+      descriptionFr:
+        "Un site humoristique developpé en HTML, CSS et JavaScript - avec un bonus caché!",
     url: "https://vinchc-secret-santa.vercel.app/",
     alt: "JavaScript logo",
   },
@@ -88,13 +62,8 @@ export const SIDE_PROJECTSFR: ProjectProps[] = [
 export const CONTACT: ContactProps = {
   image: portrait.src,
   title: "vinch.cm@gmail.com",
-  description: "Contact me",
-};
-
-export const CONTACTFR: ContactProps = {
-  image: portrait.src,
-  title: "vinch.cm@gmail.com",
-  description: "Me contacter",
+  descriptionEn: "Contact me",
+  descriptionFr: "Me contacter",
 };
 
 export const WORKS: WorkProps[] = [
@@ -201,7 +170,7 @@ export const SKILLSFR: SkillProps[] = [
   },
   {
     picture: project_management.src,
-    alt: "Une personne manageant un projet àce qui inclut des tâches, délais et la communication.",
+    alt: "Une personne manageant un projet ce qui inclut des tâches, délais et la communication.",
     title: "Conduite de projet",
     description:
       "De la compréhension des besoins réels des clients jusqu'à la livraison du MVP, tout en considérant tous les acteurs impliqués, de nombreuses possibilités (certaines meilleures) peuvent se présenter.",
@@ -217,22 +186,12 @@ export const SKILLSFR: SkillProps[] = [
 
 export const EDUCATION: EducationProps[] = [
   {
-    url: "https://www.wildcodeschool.com/fr-fr/",
+    url: "https://www.francecompetences.fr/recherche/rncp/37873/",
     picture: wcs.src,
     alt: "Wild Code School logo",
     title: "Concepteur développeur d'applications",
-    date: "Received 04/10/2024",
-    school: "Wild Code School",
-  },
-];
-
-export const EDUCATIONFR: EducationProps[] = [
-  {
-    url: "https://www.wildcodeschool.com/fr-fr/",
-    picture: wcs.src,
-    alt: "Wild Code School logo",
-    title: "Concepteur développeur d'applications",
-    date: "Délivré le 04/10/2024",
+    dateEn: "Received 04/10/2024",
+    dateFr: "Délivré le 04/10/2024",
     school: "Wild Code School",
   },
 ];

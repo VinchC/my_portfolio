@@ -1,15 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
 import { Card } from "@/components/ui/card";
-import { Section } from "./Section";
+import { Section } from "./utils/Section";
 import { Work } from "./Work";
-import {
-  SIDE_PROJECTS,
-  SIDE_PROJECTSFR,
-  WORKS,
-  EDUCATION,
-  EDUCATIONFR,
-  WORKSFR,
-} from "../data/data";
+import { SIDE_PROJECTS, WORKS, EDUCATION, WORKSFR } from "../data/data";
 import { Project } from "./Project";
 import { Education } from "./Education";
 import LanguageContext from "../contexts/LanguageContext";
@@ -20,32 +13,21 @@ export const Core = () => {
 
   return (
     <>
-      <Section className="flex max-md:flex-col items-start gap-4 mt-4">
-        <div className="flex-[2] w-full">
-          <Card className="w-full p-4 flex flex-col gap-2">
-            {language === "English" ? (
+      <Section className="section items-start">
+          <div className="flex-[2] w-full" id="projects">
+            <Card className="card">
               <>
-                <p className="text-lg">Projects</p>
+                <p className="text-lg">{language === "English" ? "Projects" : "Projets"}</p>
                 <div className="flex flex-col gap-3">
                   {SIDE_PROJECTS.map((project, index) => (
                     <Project key={index} {...project} />
                   ))}
                 </div>
               </>
-            ) : (
-              <>
-                <p className="text-lg">Projets</p>
-                <div className="flex flex-col gap-3">
-                  {SIDE_PROJECTSFR.map((project, index) => (
-                    <Project key={index} {...project} />
-                  ))}
-                </div>
-              </>
-            )}
-          </Card>
-        </div>
-        <div className="flex-[2] w-full flex flex-col gap-4">
-          <Card className="w-full p-4 flex flex-col gap-4">
+            </Card>
+          </div>
+        <div id="work" className="flex-[2] w-full flex flex-col gap-6">
+          <Card className="card">
             {language === "English" ? (
               <>
                 <p className="text-lg">Work experience</p>
@@ -57,9 +39,7 @@ export const Core = () => {
               </>
             ) : (
               <>
-                <p className="text-lg">
-                  Expérience professionnelle
-                </p>
+                <p className="text-lg">Expérience professionnelle</p>
                 <div className="flex flex-col">
                   {WORKSFR.map((work, index) => (
                     <Work key={index} {...work} />
@@ -68,28 +48,15 @@ export const Core = () => {
               </>
             )}
           </Card>
-          <Card className="w-full p-4 flex flex-col gap-2">
-            {language === "English" ? (
-              <>
-                <p className="text-lg p-1">Certificate</p>
-                <div className="flex flex-col">
-                  {EDUCATION.map((education, index) => (
-                    <Education key={index} {...education} />
-                  ))}
-                </div>
-              </>
-            ) : (
-              <>
-                <p className="text-lg p-1">
-                  Titre professionnel
-                </p>
-                <div className="flex flex-col">
-                  {EDUCATIONFR.map((education, index) => (
-                    <Education key={index} {...education} />
-                  ))}
-                </div>
-              </>
-            )}
+          <Card className="card">
+            <>
+              <p className="text-lg p-1">{language === "English" ? "Certificate" : "Titre professionnel"}</p>
+              <div className="flex flex-col">
+                {EDUCATION.map((education, index) => (
+                  <Education key={index} {...education} />
+                ))}
+              </div>
+            </>
           </Card>
         </div>
       </Section>
