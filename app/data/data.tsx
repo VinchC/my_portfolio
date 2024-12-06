@@ -5,6 +5,7 @@ import {
   SkillProps,
   WorkProps,
 } from "../types";
+import vues from "../../public/images/vues.jpeg";
 import php from "../../public/images/php_logo.png";
 import javascript from "../../public/images/javascript_logo.png";
 import graphql from "../../public/images/graphql_logo.png";
@@ -19,13 +20,13 @@ import communication from "../../public/images/communication.png";
 
 export const SIDE_PROJECTS: ProjectProps[] = [
   {
-    Logo: wcag.src,
-    title: "Jaimepaslesmaths",
+    Logo: vues.src,
+    title: "Vues d'ici",
     descriptionEn:
-    "A website which aim is to supply a few courses in mathematics (8th grade) while implementing the good practices regarding accessibility, developped with Next.js 15, Typescript, Sanity and GROQ - work in progress.",
+    "A local newspaper website which informs about the activity of the XIXème and XXème districts in Paris, developped with Next.js and Typescript - work in progress.",
     descriptionFr:
-    "Un site dont le but est de proposer quelques cours de maths niveau 4ème tout en implémentant les bonnes pratiques d'accessibilité, développé avec Next.js 15, Typescript, Sanity et GROQ - travail en cours.",
-    url: "https://github.com/VinchC/next_type_tail",
+    "Le site d'un journal local qui relate l'actualité des XIXème et XXème arrondissements de Paris, développé avec Next.js et Typescript - travail en cours.",
+    url: "https://github.com/VinchC/vues_d_ici",
     alt: "Mathematics logo",
   },
   {
