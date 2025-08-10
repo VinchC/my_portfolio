@@ -1,7 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 /* eslint-disable react/no-unescaped-entities */
 import { Section } from "./utils/Section";
-import portrait from "../../public/images/portrait.jpeg";
 import { GithubIcon } from "./icons/GithubIcon";
 import Link from "next/link";
 import { Code } from "./utils/Code";

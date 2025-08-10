@@ -2,11 +2,12 @@
 import Link from "next/link";
 import { Section } from "./utils/Section";
 import portrait from "../../public/images/portrait.jpeg";
-import { buttonVariants, cn } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
 import { AccessibleIcon } from "@radix-ui/react-accessible-icon";
 import { Mail } from "lucide-react";
 import { GithubIcon } from "./icons/GithubIcon";
 import { LinkedInIcon } from "./icons/LinkedInIcon";
+import { cn } from "@/lib/utils";
 
 export const Footer = () => {
   return (

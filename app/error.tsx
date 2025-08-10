@@ -1,5 +1,6 @@
 "use client";
-import { buttonVariants, cn } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 import "./styles/not-found.css";
 
 import Link from "next/link";
