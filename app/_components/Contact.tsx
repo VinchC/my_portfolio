@@ -4,7 +4,7 @@ import { Card } from "@/components/ui/card";
 import { Mail } from "lucide-react";
 import { LinkedInIcon } from "./icons/LinkedInIcon";
 import Link from "next/link";
-import { cn } from "@/lib/utils";
+import { cn } from "@/lib/utils"
 import { buttonVariants } from "@/components/ui/button";
 import portrait from "../../public/images/portrait.jpeg";
 import { AccessibleIcon } from "@radix-ui/react-accessible-icon";
