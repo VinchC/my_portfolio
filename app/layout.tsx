@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import { Anek_Telugu } from "next/font/google";
 import "./globals.css";
 import Providers from "./providers";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -23,7 +24,7 @@ const AnekTelugu = Anek_Telugu({
 export const metadata: Metadata = {
   title: "Vincent Cantonnet - Full Stack Developper",
   description:
-    "Trained in PHP, React, SQL and GraphQL, on the lookout for new professional opportunities.",
+    "Trained in Typescript, Python, PHP, React, SQL and GraphQL, on the lookout for new professional opportunities.",
 };
 
 export default function RootLayout({
@@ -36,6 +37,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${AnekTelugu.variable} h-full bg-background text-foreground`}
       >
+        <GoogleAnalytics gaId="G-SHKS1L1NFK" />
         <Providers>{children}</Providers>
       </body>
     </html>
