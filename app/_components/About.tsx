@@ -15,7 +15,7 @@ export const About = () => {
       <Section className="section">
         <div className="flex-[3] flex flex-col gap-2 w-full mt-16">
           <h2 className="text-5xl font-caption">Full Stack Developper</h2>
-          <h3 className="text-3xl font-caption mt-4">Hello !</h3>
+          <h3 className="text-3xl font-caption mt-4">Hello.</h3>
           {language === "English" ? (
             <>
               <p className="text-foreground">
