@@ -1,4 +1,5 @@
-import { buttonVariants, cn } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
+import { cn } from "@/lib/utils"
 import React from "react";
 
 export default function CV() {

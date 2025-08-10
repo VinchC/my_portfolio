@@ -1,7 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 
-import { cn, buttonVariants } from "@/components/ui/button";
+import { cn } from "@/lib/utils"
+import { buttonVariants } from "@/components/ui/button";
 import { Section } from "./utils/Section";
 import Link from "next/link";
 import CV from "./CV";
@@ -18,7 +19,7 @@ export const Header = ({
   toggleLanguage: any;
 }) => {
   const [isOpen, setIsOpen] = useState(false);
-  console.log(isOpen);
+  // console.log(isOpen);
 
   return (
     <header className="fixed w-full top-0 py-4 h-16 bg-card border-b-[2px] border-background">
